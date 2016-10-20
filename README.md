@@ -1,4 +1,4 @@
-# StackADT
+# Stack ADT
 
 Lab2: Stack ADT
 
@@ -6,7 +6,7 @@ CIS 22C, Fall 2016
 
 ## Description
 
-The Stack ADT is an ordered collection of data of the same type.
+The Stack Abstract Data Type is an ordered collection of same-type data.
 
 The behavior of Stack ADT consists of the following operations: 
 Create, Push, Pop, and isEmpty.

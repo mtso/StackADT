@@ -15,7 +15,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
+      <x>300</x>
       <y>80</y>
       <w>100</w>
       <h>70</h>
@@ -25,6 +25,94 @@
 -data: typedef
 -next: Node*
 </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>60</y>
+      <w>180</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>List
+-
+-head: Node*
+-
++Create(datatype: int)
++Add(data: T)
++Delete(): bool
++Search(data: T): int
++Clear(): bool
++Destroy()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>80</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>290</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Stack
+-
+-
++Create(datatype: T)
++Push(data: T) 
++Pop(): T
++isEmpty(): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>210</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>30</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+T: typename
+layer=1
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>260</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+T: typename
+layer=1
+bg=white</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

@@ -1,41 +1,41 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-#include "Node.h"
+//#include "Node.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace StackADTTests
-{		
-	TEST_CLASS(NodeTests)
+{
+	TEST_CLASS(StackTests)
 	{
 	public:
-		
-		TEST_METHOD(NodeConstructor)
+
+		// Create
+		TEST_METHOD(StackConstructor)
 		{
 			Assert::Fail(L"Test case has not been written yet.");
 		}
 
-		TEST_METHOD(NodeDestructor)
+		// Destroy
+		TEST_METHOD(StackDestructor)
 		{
 			Assert::Fail(L"Test case has not been written yet.");
 		}
 
-		TEST_METHOD(SetData)
+		// Push
+		TEST_METHOD(Push)
 		{
 			Assert::Fail(L"Test case has not been written yet.");
 		}
 
-		TEST_METHOD(GetData)
+		// Pop
+		TEST_METHOD(Pop)
 		{
 			Assert::Fail(L"Test case has not been written yet.");
 		}
 
-		TEST_METHOD(SetNext)
-		{
-			Assert::Fail(L"Test case has not been written yet.");
-		}
-
-		TEST_METHOD(GetNext)
+		// isEmpty
+		TEST_METHOD(IsEmpty)
 		{
 			Assert::Fail(L"Test case has not been written yet.");
 		}
