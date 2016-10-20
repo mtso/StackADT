@@ -2,29 +2,32 @@
 <diagram program="umlet" version="14.2">
   <help_text>	
 
-// Stack ADT Class Diagram
-// Adrian Marroquin, Matthew Tso
-// CIS 22C, Fall 2016
+Stack ADT Class Diagram
+Adrian Marroquin, Matthew Tso
+CIS 22C, Fall 2016
 
 
-// Uncomment the following line to change the fontsize and font:
-// fontsize=14
-// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+fontsize=16
+fontfamily=Monospaced
 </help_text>
   <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
+      <x>350</x>
       <y>80</y>
-      <w>100</w>
-      <h>70</h>
+      <w>240</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>Node
---
+-
 -data: typedef
 -next: Node*
-</panel_attributes>
+-
++getNext(): Node*
++setNext(const Node*)
++getData(): typedef
++setData(const Node*)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -32,7 +35,7 @@
     <coordinates>
       <x>40</x>
       <y>60</y>
-      <w>180</w>
+      <w>240</w>
       <h>160</h>
     </coordinates>
     <panel_attributes>List
@@ -50,21 +53,21 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
+      <x>270</x>
       <y>80</y>
-      <w>110</w>
+      <w>100</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 bg=black</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>40</x>
       <y>290</y>
-      <w>180</w>
+      <w>240</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>Stack
@@ -79,7 +82,7 @@ bg=black</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
+      <x>150</x>
       <y>210</y>
       <w>30</w>
       <h>100</h>
@@ -90,9 +93,9 @@ bg=black</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>160</x>
+      <x>190</x>
       <y>30</y>
-      <w>90</w>
+      <w>120</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=.
@@ -104,9 +107,9 @@ bg=white</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>160</x>
+      <x>190</x>
       <y>260</y>
-      <w>90</w>
+      <w>120</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=.
