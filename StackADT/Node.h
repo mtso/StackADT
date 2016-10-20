@@ -15,7 +15,7 @@ private:
 	Node<DataType>* next;
 
 public:
-	Node(T initialData);
+	Node(DataType initialData);
 	~Node();
 
 	Node* getNext();
