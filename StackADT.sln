@@ -7,6 +7,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StackADT", "StackADT\StackA
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StackADTTests", "StackADTTests\StackADTTests.vcxproj", "{F09D2FE0-F975-4FB0-862A-0D480BBDA3E1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D57BBA0A-56FA-4CA5-B136-97673A4D137F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		StackADT_ClassDiagram.uxf = StackADT_ClassDiagram.uxf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
