@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <help_text>	
+
+// Stack ADT Class Diagram
+// Adrian Marroquin, Matthew Tso
+// CIS 22C, Fall 2016
+
+
+// Uncomment the following line to change the fontsize and font:
+// fontsize=14
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+</help_text>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>80</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Node
+--
+-data: typedef
+-next: Node*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
