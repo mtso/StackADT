@@ -1,4 +1,4 @@
-// Node.h
+// List.h
 // Lab 2: Stack ADT
 // CIS 22C F2016: Adrian Marroquin, Matthew Tso
 
@@ -16,11 +16,12 @@ class List
 {
 private:
 	Node<DataType>* head;
-	Node<DataType>* tail;
+	int length;
+
 public:
 	List();
-	~List(); 
-	Add(DataType item);
+	virtual ~List(); 
+	addFirst(DataType item);
 	int Delete();
 	int Search(DataType item);
 	bool Clear();

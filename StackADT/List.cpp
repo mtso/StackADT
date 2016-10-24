@@ -3,7 +3,7 @@
 
 template <typename DataType>
 List::List()
-	: head{ nullptr }
+	: head( nullptr )
 {
 }
 
