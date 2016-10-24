@@ -1,11 +1,14 @@
-/**
- * Node Class
- * Single node object for use in lists.
- */
+// Node.h
+// Lab 2: Stack ADT
+// CIS 22C F2016: Adrian Marroquin, Matthew Tso
 
 #ifndef STACKADT_NODE_H
 #define STACKADT_NODE_H
 
+/**
+* Node Class
+* Single node object for use in lists.
+*/
 template <typename DataType>
 class Node
 {
