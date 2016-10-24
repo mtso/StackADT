@@ -20,6 +20,18 @@ List<DataType>::~List()
 }
 
 template <typename DataType>
+int List<DataType>::getLength() const
+{
+	return length;
+}
+
+template <typename DataType>
+bool List<DataType>::isEmpty() const
+{
+	return length == 0;
+}
+
+template <typename DataType>
 bool List<DataType>::addFirst(const DataType& newItem)
 {
 	if (length == 0)
@@ -36,12 +48,18 @@ bool List<DataType>::addFirst(const DataType& newItem)
 		return true;
 	}	
 }
+//
+//template <typename DataType>
+//bool remove(const DataType& toRemove)
+//{
+//	bool isFound = false;
+//	Node<DataType>* nextSearch = 
+//	while (!isFound)
+//	{
+//		
+//	}
+//}
 
-template <typename DataType>
-int List<DataType>::getLength() const
-{
-	return length;
-}
 //template <typename DataType>
 //List::Add(DataType item)
 //{

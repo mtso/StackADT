@@ -13,7 +13,8 @@ namespace StackADTTests
 		// Create
 		TEST_METHOD(ListConstructor)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			List<int> list = List<int>();
+			Assert::IsTrue(list.isEmpty());
 		}
 
 		// Destroy

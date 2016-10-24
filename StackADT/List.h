@@ -26,6 +26,17 @@ public:
 	virtual ~List();	// Virtual destructor
 
 	/**
+	 * Returns the list length.
+	 */
+	int getLength() const;
+
+	/**
+	 * Returns whether the list is empty or not.
+	 * @returns True if the list is empty, false if not.
+	 */
+	bool isEmpty() const;
+
+	/**
 	 * Adds an item into the beginning of the list.
 	 * @param newItem The new <DataType> item to add.
 	 * @returns True of successful, false if unsuccessful.
@@ -33,9 +44,9 @@ public:
 	bool addFirst(const DataType& newItem);
 
 	/**
-	 * Returns the list length.
+	 * Removes an item from the list
 	 */
-	int getLength() const;
+	//bool remove(const DataType& toRemove);
 };
 
 #include "List.cpp"
