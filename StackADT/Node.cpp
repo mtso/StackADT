@@ -18,12 +18,12 @@ void Node<DataType>::setNext(const Node* newNext)
 {
 	next = newNext;
 }
-//
-//template <typename DataType>
-//DataType Node<DataType>::getData() const
-//{
-//	return data;
-//}
+
+template <typename DataType>
+DataType Node<DataType>::getData() const
+{
+	return data;
+}
 
 template <typename DataType>
 void Node<DataType>::setData(const DataType& newData)

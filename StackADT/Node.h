@@ -18,7 +18,7 @@ private:
 
 public:
 	// Only construct with data
-	Node(const DataType& initialData); // : data(initialData), next(nullptr) {}
+	Node(const DataType& initialData);
 
 	/**
 	 * @returns the next node in the list
@@ -33,7 +33,7 @@ public:
 	/**
 	 * @returns the data that this node holds.
 	 */
-	DataType getData() const { return data; }
+	DataType getData() const;
 
 	/**
 	 * @param sets a new piece of data for this node to hold.
