@@ -21,6 +21,9 @@ private:
 	// Keeps track of the number of list items.
 	int length;
 
+	/**
+	 * Returns the pointer to an item
+	 */
 	Node<DataType>* getPointerTo(const DataType& item) const;
 
 public:
