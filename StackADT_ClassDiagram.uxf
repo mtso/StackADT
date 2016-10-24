@@ -40,7 +40,8 @@ fontfamily=Monospaced
     </coordinates>
     <panel_attributes>List
 -
--head: Node*
+#head: Node*
+#length: Int
 -
 +Create(datatype: int)
 +Add(data: T)
