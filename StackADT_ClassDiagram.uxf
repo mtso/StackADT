@@ -21,13 +21,13 @@ fontfamily=Monospaced
     </coordinates>
     <panel_attributes>Node
 -
--data: typedef
+-data: T
 -next: Node*
 -
 +getNext(): Node*
 +setNext(const Node*)
-+getData(): typedef
-+setData(const Node*)</panel_attributes>
++getData(): T
++setData(const T&amp;)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -110,6 +110,20 @@ bg=white</panel_attributes>
     <coordinates>
       <x>190</x>
       <y>260</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+T: typename
+layer=1
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>50</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
