@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 #include "Node.h"
+#include <string>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -29,7 +30,9 @@ namespace StackADTTests
 
 		TEST_METHOD(GetData)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			std::string words("Don't drink the haterade.");
+			Node<std::string> message = Node<std::string>(words);
+			Assert::AreEqual(words, message.getData());
 		}
 
 		TEST_METHOD(SetNext)
