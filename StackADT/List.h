@@ -46,7 +46,7 @@ public:
 	/**
 	 * Removes an item from the list
 	 */
-	//bool remove(const DataType& toRemove);
+	bool remove(const DataType& toRemove);
 };
 
 #include "List.cpp"

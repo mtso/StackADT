@@ -48,17 +48,40 @@ bool List<DataType>::addFirst(const DataType& newItem)
 		return true;
 	}	
 }
-//
-//template <typename DataType>
-//bool remove(const DataType& toRemove)
-//{
-//	bool isFound = false;
-//	Node<DataType>* nextSearch = 
-//	while (!isFound)
-//	{
-//		
-//	}
-//}
+
+template <typename DataType>
+bool List<DataType>::remove(const DataType& toRemove)
+{
+	if (isEmpty())
+	{
+		return false;
+	}
+
+	Node<DataType>* currentSearch = head;
+	Node<DataType>* previousSearch = head;
+
+	do
+	{
+		if (currentSearch->getData() == toRemove)
+		{
+			Node<DataType>* nodeToRemove = currentSearch;
+			previousSearch->setNext(currentSearch->getNext());
+			nodeToRemove->setNext(nullptr);
+			delete nodeToRemove;
+			nodeToRemove = nullptr;
+			length--;
+			return true;
+		}
+		else
+		{
+			previousSearch = currentSearch;
+			currentSearch = currentSearch->getNext();
+		}
+	} 
+	while (currentSearch != nullptr);
+	
+	return false;
+}
 
 //template <typename DataType>
 //List::Add(DataType item)

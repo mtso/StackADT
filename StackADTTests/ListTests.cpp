@@ -14,6 +14,7 @@ namespace StackADTTests
 		TEST_METHOD(ListConstructor)
 		{
 			List<int> list = List<int>();
+			Assert::AreEqual(0, list.getLength());
 			Assert::IsTrue(list.isEmpty());
 		}
 
@@ -33,10 +34,24 @@ namespace StackADTTests
 			Assert::AreEqual(1, list.getLength());
 		}
 
-		// Delete (an item to top of list)
-		TEST_METHOD(DeleteFromTop)
+		// Delete
+		TEST_METHOD(Delete)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			List<int> list = List<int>();
+			list.addFirst(2);
+			Assert::IsFalse(list.remove(1));
+			Assert::IsTrue(list.remove(2));
+			Assert::IsFalse(list.remove(0));
+
+			list.addFirst(1);
+			list.addFirst(2);
+			list.addFirst(3);
+			Assert::IsFalse(list.remove(4));
+			Assert::IsTrue(list.remove(1));
+			Assert::IsFalse(list.remove(1));
+			Assert::IsTrue(list.remove(3));
+			Assert::IsFalse(list.remove(3));
+			Assert::IsTrue(list.remove(2));
 		}
 
 		// Search
