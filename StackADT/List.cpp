@@ -3,24 +3,27 @@
 
 template <typename DataType>
 List::List()
-	: head{ nullptr },
-	length{ 0 }
+	: head{ nullptr }
 {
 }
 
 template <typename DataType>
-List::~List()
+List::Add(DataType item)
 {
-}
+	if (head == nullptr)
+	{
+		Node<DataType>* newItem = Node<DataType>(item);
+		head = newItem;
+		tail = newItem;
+		newItem->setNext(nullptr);
+	}
 
-template <typename DataType>
-bool List::isEmpty() const
-{
-	(head == nullptr) ? true : false;
-}
-
-template <typename DataType>
-bool List::insert(int position, int DataType item)
-{
-
+	// Problem, get current node to point to new node.
+	else
+	{
+		Node<DataType>* newItem = Node<DataType>(item);
+		// no
+		tail = newItem;
+		newItem->setNext(nullptr);
+	}
 }
