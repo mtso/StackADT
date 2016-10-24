@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 #include "Node.h"
+#include <string>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -26,6 +27,10 @@ namespace StackADTTests
 		{
 			Node<int> node = Node<int>(3);
 			Assert::AreEqual(3, node.getData());
+
+			std::string words("Don't drink the haterade.");
+			Node<std::string> message = Node<std::string>(words);
+			Assert::AreEqual(words, message.getData());
 		}
 
 		TEST_METHOD(SetData)
@@ -33,6 +38,7 @@ namespace StackADTTests
 			Node<int> node = Node<int>();
 			node.setData(9);
 			Assert::AreEqual(9, node.getData());
+
 
 			node.setData(INT_MAX);
 			Assert::AreEqual(INT_MAX, node.getData());
