@@ -10,8 +10,5 @@ using namespace std;
 
 int main()
 {
-	List<int> list = List<int>();
-	list.addFirst(2);
-	list.remove(1);
 	return 0;
 }
