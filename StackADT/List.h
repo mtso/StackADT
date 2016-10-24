@@ -44,7 +44,7 @@ public:
 	/**
 	 * Adds an item into the beginning of the list.
 	 * @param newItem The new <DataType> item to add.
-	 * @returns True of successful, false if unsuccessful.
+	 * @returns True if successful, false if unsuccessful.
 	 */
 	bool addFirst(const DataType& newItem);
 
