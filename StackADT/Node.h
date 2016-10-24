@@ -41,16 +41,28 @@ public:
 	 */
 	Node(const DataType& initialData, Node<DataType>* nextNode);
 
-	// @returns the next node in the list
+	/**
+	 * Returns a pointer to the next node.
+	 * @returns The pointer to next.
+	 */
 	Node<DataType>* getNext() const;
 
-	// @param newNext the node to set as the next node in the list
+	/**
+	 * Sets the next pointer to a new node.
+	 * @param newNext The pointer to the next node in the list.
+	 */
 	void setNext(Node* newNext);
 
-	// @returns the data that this node holds.
+	/**
+	 * Returns the data that this node holds.
+	 * @returns The data item.
+	 */
 	DataType getData() const;
 
-	// @param sets a new piece of data for this node to hold.
+	/**
+	 * Sets a new piece of data for this node to hold.
+	 * @param newData
+	 */
 	void setData(const DataType& newData);
 };
 

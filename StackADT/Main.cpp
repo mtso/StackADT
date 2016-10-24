@@ -1,6 +1,6 @@
 // Main.cpp
 // Lab 2: Stack ADT
-// CIS 22C: Adrian Marroquin, Matthew Tso
+// CIS 22C F2016: Adrian Marroquin, Matthew Tso
 
 #include "Node.h"
 #include <iostream>
