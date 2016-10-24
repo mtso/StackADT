@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-//#include "List.h"
+#include "List.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -23,9 +23,13 @@ namespace StackADTTests
 		}
 
 		// Add (an item to top of list)
+		// Method should return true
+		// List length should be 1
 		TEST_METHOD(AddToTop)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			List<int> list = List<int>();
+			Assert::IsTrue(list.addFirst(-9));
+			Assert::AreEqual(1, list.getLength());
 		}
 
 		// Delete (an item to top of list)

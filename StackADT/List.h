@@ -9,26 +9,35 @@
 
 /**
  * Linked List implementation of Bag ADT
- *
+ * 
  */
 template <typename DataType>
 class List 
 {
 private:
+	// Pointer to the first node of the list.
 	Node<DataType>* head;
+	
+	// Keeps track of the number of list items.
 	int length;
 
 public:
-	List();
-	virtual ~List(); 
-	addFirst(DataType item);
-	int Delete();
-	int Search(DataType item);
-	bool Clear();
-	bool Destroy();
+	List();				// Default constructor
+	virtual ~List();	// Virtual destructor
+
+	/**
+	 * Adds an item into the beginning of the list.
+	 * @param newItem The new <DataType> item to add.
+	 * @returns True of successful, false if unsuccessful.
+	 */
+	bool addFirst(const DataType& newItem);
+
+	/**
+	 * Returns the list length.
+	 */
+	int getLength() const;
 };
 
-
-//#include "List.cpp"
+#include "List.cpp"
 #endif
 

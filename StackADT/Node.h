@@ -51,7 +51,7 @@ public:
 	 * Sets the next pointer to a new node.
 	 * @param newNext The pointer to the next node in the list.
 	 */
-	void setNext(Node* newNext);
+	void setNext(Node<DataType>* newNext);
 
 	/**
 	 * Returns the data that this node holds.

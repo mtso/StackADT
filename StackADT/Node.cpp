@@ -33,7 +33,7 @@ Node<DataType>* Node<DataType>::getNext() const
 }
 
 template <typename DataType>
-void Node<DataType>::setNext(Node* newNext)
+void Node<DataType>::setNext(Node<DataType>* newNext)
 {
 	next = newNext;
 }
