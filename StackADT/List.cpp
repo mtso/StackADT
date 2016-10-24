@@ -42,8 +42,8 @@ bool List<DataType>::addFirst(const DataType& newItem)
 	}
 	else
 	{
-		Node<DataType>* newNode = new Node<DataType>(newItem, head->getNext());
-		head->setNext(newNode);
+		Node<DataType>* newNode = new Node<DataType>(newItem, head);
+		head = newNode;
 		length++;
 		return true;
 	}	
@@ -88,6 +88,23 @@ bool List<DataType>::remove(const DataType& toRemove)
 	}
 
 	return shouldRemoveItem;
+}
+
+template <typename DataType>
+void List<DataType>::printList() const
+{
+	if (!isEmpty()) {
+		cout << head->getData() << endl;
+		Node<DataType>* nextNode = head->getNext();
+		while (nextNode != nullptr)
+		{
+			cout << nextNode->getData() << endl;
+			nextNode = nextNode->getNext();
+		} 
+	}
+	else {
+		cout << "Empty List" << endl;
+	}
 }
 
 //template <typename DataType>
