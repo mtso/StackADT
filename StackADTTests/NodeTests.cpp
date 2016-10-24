@@ -12,7 +12,9 @@ namespace StackADTTests
 		
 		TEST_METHOD(NodeConstructor)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			Node<int> intNode = Node<int>(4);
+
+			Assert::AreEqual(4, intNode.getData());
 		}
 
 		TEST_METHOD(NodeDestructor)

@@ -12,17 +12,34 @@ class Node
 private:
 	// The piece of data that this object holds
 	DataType data;
+
+	// Pointer to the next node in the list
 	Node<DataType>* next;
 
 public:
-	Node(DataType initialData);
-	~Node();
+	// Only construct with data
+	Node(const DataType& initialData); // : data(initialData), next(nullptr) {}
 
-	Node* getNext();
+	/**
+	 * @returns the next node in the list
+	 */
+	Node<DataType>* getNext() const;
+
+	/**
+	 * @param newNext the node to set as the next node in the list
+	 */
 	void setNext(const Node* newNext);
 
-	DataType getData();
+	/**
+	 * @returns the data that this node holds.
+	 */
+	DataType getData() const { return data; }
+
+	/**
+	 * @param sets a new piece of data for this node to hold.
+	 */
 	void setData(const DataType& newData);
 };
 
+#include "Node.cpp"
 #endif
