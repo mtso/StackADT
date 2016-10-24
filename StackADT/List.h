@@ -21,6 +21,8 @@ private:
 	// Keeps track of the number of list items.
 	int length;
 
+	Node<DataType>* getPointerTo(const DataType& item) const;
+
 public:
 	List();				// Default constructor
 	virtual ~List();	// Virtual destructor

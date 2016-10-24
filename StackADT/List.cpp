@@ -50,37 +50,44 @@ bool List<DataType>::addFirst(const DataType& newItem)
 }
 
 template <typename DataType>
-bool List<DataType>::remove(const DataType& toRemove)
+Node<DataType>* List<DataType>::getPointerTo(const DataType& item) const
 {
-	if (isEmpty())
+	Node<DataType>* search = head;
+	while (search != nullptr)
 	{
-		return false;
-	}
-
-	Node<DataType>* currentSearch = head;
-	Node<DataType>* previousSearch = head;
-
-	do
-	{
-		if (currentSearch->getData() == toRemove)
+		if (item == search->getData())
 		{
-			Node<DataType>* nodeToRemove = currentSearch;
-			previousSearch->setNext(currentSearch->getNext());
-			nodeToRemove->setNext(nullptr);
-			delete nodeToRemove;
-			nodeToRemove = nullptr;
-			length--;
-			return true;
+			return search;
 		}
 		else
 		{
-			previousSearch = currentSearch;
-			currentSearch = currentSearch->getNext();
+			search = search->getNext();
 		}
-	} 
-	while (currentSearch != nullptr);
-	
-	return false;
+	}
+	return search;
+}
+
+template <typename DataType>
+bool List<DataType>::remove(const DataType& toRemove)
+{
+	Node<DataType>* itemPointer = getPointerTo(toRemove);
+	bool shouldRemoveItem = !isEmpty() && itemPointer != nullptr;
+
+	if (shouldRemoveItem)
+	{
+		itemPointer->setData(head->getData());
+
+		Node<DataType>* toRemovePointer = head;
+		head = head->getNext();
+
+		toRemovePointer->setNext(nullptr);
+		delete toRemovePointer;
+		toRemovePointer = nullptr;
+
+		length--;
+	}
+
+	return shouldRemoveItem;
 }
 
 //template <typename DataType>

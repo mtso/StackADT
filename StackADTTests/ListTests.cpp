@@ -46,12 +46,15 @@ namespace StackADTTests
 			list.addFirst(1);
 			list.addFirst(2);
 			list.addFirst(3);
-			Assert::IsFalse(list.remove(4));
-			Assert::IsTrue(list.remove(1));
-			Assert::IsFalse(list.remove(1));
-			Assert::IsTrue(list.remove(3));
+			// Should now look like (head: 3, 2, 1)
+
+			Assert::IsFalse(list.remove(4));   // Remove a nonexistent value
+			Assert::IsTrue(list.remove(2));    // Remove the middle item
+			Assert::IsFalse(list.remove(2));
+			Assert::IsTrue(list.remove(3));    // Remove first item (in a list of >1 items)
 			Assert::IsFalse(list.remove(3));
-			Assert::IsTrue(list.remove(2));
+			Assert::IsTrue(list.remove(1));    // Remove last item
+			Assert::IsFalse(list.remove(1));
 		}
 
 		// Search
