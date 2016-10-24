@@ -17,8 +17,14 @@ private:
 	Node<DataType>* next;
 
 public:
-	// Only construct with data
+	// Default constructor
+	Node();
+
+	// Construct with data
 	Node(const DataType& initialData);
+
+	// Construct with data and next node
+	Node(const DataType& initialData, Node<DataType>* nextNode);
 
 	/**
 	 * @returns the next node in the list
@@ -28,7 +34,7 @@ public:
 	/**
 	 * @param newNext the node to set as the next node in the list
 	 */
-	void setNext(const Node* newNext);
+	void setNext(Node* newNext);
 
 	/**
 	 * @returns the data that this node holds.

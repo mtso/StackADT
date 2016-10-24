@@ -1,10 +1,25 @@
+#ifndef STACKADT_NODE_CPP
+#define STACKADT_NODE_CPP
+
 #include "Node.h"
 
 template <typename DataType>
-Node<DataType>::Node(const DataType& initialdata) : data(initialdata), next(nullptr)
+Node<DataType>::Node() : next(nullptr) 
 {
-	//data = initialdata;
-	//next = nullptr;
+}
+
+template <typename DataType>
+Node<DataType>::Node(const DataType& initialData) 
+	: data(initialData)
+	, next(nullptr)
+{
+}
+
+template <typename DataType>
+Node<DataType>::Node(const DataType& initialData, Node<DataType>* nextNode)
+	: data(initialData)
+	, next(nextNode)
+{
 }
 
 template <typename DataType>
@@ -14,7 +29,7 @@ Node<DataType>* Node<DataType>::getNext() const
 }
 
 template <typename DataType>
-void Node<DataType>::setNext(const Node* newNext)
+void Node<DataType>::setNext(Node* newNext)
 {
 	next = newNext;
 }
@@ -30,3 +45,5 @@ void Node<DataType>::setData(const DataType& newData)
 {
 	data = newData;
 }
+
+#endif
