@@ -6,9 +6,10 @@
 #define STACKADT_NODE_H
 
 /**
-* Node Class
-* Single node object for use in lists.
-*/
+ * Node Class
+ * The node object contains two attributes: the data item and a pointer to the next node.
+ * The class provides accessors and modifiers for both attributes.
+ */
 template <typename DataType>
 class Node
 {
@@ -20,33 +21,36 @@ private:
 	Node<DataType>* next;
 
 public:
-	// Default constructor
+	/**
+	 * Default constructor
+	 * Initialized with a garbage value for data
+	 * and `nullptr` for next
+	 */
 	Node();
 
-	// Construct with data
+	/**
+	 * Construct with data
+	 * @param initialData
+	 */
 	Node(const DataType& initialData);
 
-	// Construct with data and next node
+	/** 
+	 * Construct with data and next node
+	 * @param initialData
+	 * @param nextNode the next node in the list
+	 */
 	Node(const DataType& initialData, Node<DataType>* nextNode);
 
-	/**
-	 * @returns the next node in the list
-	 */
+	// @returns the next node in the list
 	Node<DataType>* getNext() const;
 
-	/**
-	 * @param newNext the node to set as the next node in the list
-	 */
+	// @param newNext the node to set as the next node in the list
 	void setNext(Node* newNext);
 
-	/**
-	 * @returns the data that this node holds.
-	 */
+	// @returns the data that this node holds.
 	DataType getData() const;
 
-	/**
-	 * @param sets a new piece of data for this node to hold.
-	 */
+	// @param sets a new piece of data for this node to hold.
 	void setData(const DataType& newData);
 };
 
