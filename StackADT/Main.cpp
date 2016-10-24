@@ -10,5 +10,19 @@ using namespace std;
 
 int main()
 {
+	List<string> coolshit;
+
+	coolshit.addFirst("Cambodia");
+	coolshit.addFirst("Solar Panels");
+	coolshit.addFirst("DC Comics");
+	coolshit.addFirst("Reagonimics");
+
+	cout << "CoolShit has " << coolshit.getLength() << " items" << endl;
+	coolshit.printList();
+
+	List<string> notcool;
+	notcool.printList();
+
+	system("pause");
 	return 0;
 }

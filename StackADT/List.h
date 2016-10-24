@@ -52,6 +52,12 @@ public:
 	 * Removes an item from the list
 	 */
 	bool remove(const DataType& toRemove);
+
+	/*
+	Print out contenst of list
+	*/
+
+	void printList() const;
 };
 
 #include "List.cpp"
