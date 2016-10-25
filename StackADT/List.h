@@ -67,7 +67,7 @@ public:
 	void clear();
 
 	/*
-	Print out contenst of list
+	Print out contents of list
 	*/
 	void printList() const;
 

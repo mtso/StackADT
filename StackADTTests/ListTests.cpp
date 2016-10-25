@@ -39,7 +39,7 @@ namespace StackADTTests
 			listPtr->addFirst(1);
 			listPtr->clear();
 			delete listPtr;
-
+			listPtr = nullptr;
 			Assert::IsNull(listPtr);
 		}
 
@@ -106,6 +106,5 @@ namespace StackADTTests
 			Assert::AreEqual(0, list.getLength());
 			Assert::IsFalse(list.contains(1));
 		}
-
 	};
 }

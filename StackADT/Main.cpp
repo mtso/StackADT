@@ -20,8 +20,10 @@ int main()
 	cout << "CoolShit has " << coolshit.getLength() << " items" << endl;
 	coolshit.printList();
 
-	List<string> notcool;
-	notcool.printList();
+	coolshit.remove("DC Comics");
+
+	cout << "CoolShit has " << coolshit.getLength() << " items" << endl;
+	coolshit.printList();
 
 	system("pause");
 	return 0;

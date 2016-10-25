@@ -17,6 +17,15 @@ List<DataType>::List()
 template <typename DataType>
 List<DataType>::~List()
 {
+	while (!isEmpty())
+	{
+		Node<DataType>* toRemovePointer = head;
+		head = head->getNext();
+		toRemovePointer->setNext(nullptr);
+		delete toRemovePointer;
+		toRemovePointer = nullptr;
+		length--;
+	}
 }
 
 template <typename DataType>
@@ -99,7 +108,15 @@ bool List<DataType>::remove(const DataType& toRemove)
 template <typename DataType>
 void List<DataType>::clear()
 {
-	// Clear all the datas!!
+	while (!isEmpty())
+	{
+		Node<DataType>* toRemovePointer = head;
+		head = head->getNext();
+		toRemovePointer->setNext(nullptr);
+		delete toRemovePointer;
+		toRemovePointer = nullptr;
+		length--;
+	}
 }
 
 template <typename DataType>
