@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 #include "List.h"
+#include <iostream>
+#include <string>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -32,6 +34,13 @@ namespace StackADTTests
 			List<int> list = List<int>();
 			Assert::IsTrue(list.addFirst(-9));
 			Assert::AreEqual(1, list.getLength());
+
+			List<std::string> coolshit = List<std::string>();
+			coolshit.addFirst("Cambodia");
+			coolshit.addFirst("Solar Panels");
+			coolshit.addFirst("DC Comics");
+			coolshit.addFirst("Freakonomics");
+			Assert::AreEqual(4, coolshit.getLength());
 		}
 
 		// Delete

@@ -14,13 +14,13 @@
 template <typename DataType>
 class List 
 {
-private:
+protected:
 	// Pointer to the first node of the list.
 	Node<DataType>* head;
 	
 	// Keeps track of the number of list items.
 	int length;
-
+	
 	/**
 	 * Returns the pointer to an item
 	 */

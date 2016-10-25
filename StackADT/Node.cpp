@@ -41,7 +41,7 @@ void Node<DataType>::setNext(Node<DataType>* newNext)
 template <typename DataType>
 DataType Node<DataType>::getData() const
 {
-	return data;
+ 	return data;
 }
 
 template <typename DataType>
