@@ -61,10 +61,14 @@ public:
 	 */
 	bool remove(const DataType& toRemove);
 
+	/**
+	 * Removes all the items from the list
+	 */
+	void clear();
+
 	/*
 	Print out contenst of list
 	*/
-
 	void printList() const;
 
 	/**
