@@ -98,6 +98,26 @@ bool List<DataType>::remove(const DataType& toRemove)
 }
 
 template <typename DataType>
+bool List<DataType>::removeFirst()
+{
+	if (!isEmpty())
+	{
+		Node<DataType>* toRemovePointer = head;
+		head = head->getNext();
+		toRemovePointer->setNext(nullptr);
+		delete toRemovePointer;
+		toRemovePointer = nullptr;
+		length--;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+
+template <typename DataType>
 void List<DataType>::clear()
 {
 	while (!isEmpty())

@@ -62,13 +62,18 @@ public:
 	bool remove(const DataType& toRemove);
 
 	/**
+	 * Removes the first item from the list
+	 */
+	bool removeFirst();
+
+	/**
 	 * Removes all the items from the list
 	 */
 	void clear();
 
 	/*
-	Print out contents of list
-	*/
+	 * Print out contents of list
+	 */
 	void printList() const;
 
 	/**

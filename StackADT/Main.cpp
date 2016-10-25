@@ -10,21 +10,21 @@ using namespace std;
 
 int main()
 {
-	List<string> coolshit;
+	//List<string> coolshit;
 
-	coolshit.addFirst("Cambodia");
-	coolshit.addFirst("Solar Panels");
-	coolshit.addFirst("DC Comics");
-	coolshit.addFirst("Reagonimics");
+	//coolshit.addFirst("Cambodia");
+	//coolshit.addFirst("Solar Panels");
+	//coolshit.addFirst("DC Comics");
+	//coolshit.addFirst("Reagonimics");
 
-	cout << "CoolShit has " << coolshit.getLength() << " items" << endl;
-	coolshit.printList();
+	//cout << "CoolShit has " << coolshit.getLength() << " items" << endl;
+	//coolshit.printList();
 
-	coolshit.remove("DC Comics");
+	//coolshit.remove("DC Comics");
 
-	cout << "CoolShit has " << coolshit.getLength() << " items" << endl;
-	coolshit.printList();
+	//cout << "CoolShit has " << coolshit.getLength() << " items" << endl;
+	//coolshit.printList();
 
-	system("pause");
+	//system("pause");
 	return 0;
 }

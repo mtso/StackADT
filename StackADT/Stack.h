@@ -2,8 +2,8 @@
 // Lab 2: Stack ADT
 // CIS 22C F2016: Adrian Marroquin, Matthew Tso
 
-#ifndef STACKADT_NODE_H
-#define STACKADT_NODE_H
+#ifndef STACKADT_STACK_H
+#define STACKADT_STACK_H
 
 /*
  * Stack Class
@@ -14,10 +14,10 @@
 #include "List.h"
 
 template <typename DataType>
-class Stack : protected List
+class Stack : protected List<DataType>
 {
 public:
-	bool DataType Push();
+	bool push(const DataType& item);
 };
 
 #include "Stack.cpp"

@@ -106,5 +106,20 @@ namespace StackADTTests
 			Assert::AreEqual(0, list.getLength());
 			Assert::IsFalse(list.contains(1));
 		}
+
+		// Test removeFirst
+		TEST_METHOD(RemoveFirst)
+		{
+			List<int> list;
+
+			list.addFirst(-9);
+
+			Assert::AreEqual(1, list.getLength());
+
+			list.removeFirst();
+
+			Assert::IsTrue(list.isEmpty());
+		}
+
 	};
 }
