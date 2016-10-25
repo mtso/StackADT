@@ -34,7 +34,13 @@ namespace StackADTTests
 		// Destroy
 		TEST_METHOD(ListDestructor)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			// TODO: Make this better!
+			List<int>* listPtr = new List<int>();
+			listPtr->addFirst(1);
+			listPtr->clear();
+			delete listPtr;
+
+			Assert::IsNull(listPtr);
 		}
 
 		// Add (an item to top of list)
@@ -90,7 +96,15 @@ namespace StackADTTests
 		// Clear
 		TEST_METHOD(Clear)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			List<int> list = List<int>();
+
+			list.addFirst(1);
+			list.addFirst(1);
+			list.addFirst(1);
+
+			list.clear();
+			Assert::AreEqual(0, list.getLength());
+			Assert::IsFalse(list.contains(1));
 		}
 
 	};

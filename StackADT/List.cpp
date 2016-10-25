@@ -96,6 +96,11 @@ bool List<DataType>::remove(const DataType& toRemove)
 	return shouldRemoveItem;
 }
 
+template <typename DataType>
+void List<DataType>::clear()
+{
+	// Clear all the datas!!
+}
 
 template <typename DataType>
 void List<DataType>::printList() const
