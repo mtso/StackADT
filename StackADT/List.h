@@ -67,6 +67,10 @@ public:
 
 	void printList() const;
 
+	/**
+	 * Print contents of list into an output stream.
+	 * Used for testing.
+	 */
 	void printListTo(ostream& out) const;
 };
 
