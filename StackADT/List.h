@@ -36,18 +36,18 @@ public:
 	/**
 	 * Returns the list length.
 	 */
-	int getLength() const;
+	virtual int getLength() const;
 
 	/**
 	 * Returns whether the list is empty or not.
 	 * @returns True if the list is empty, false if not.
 	 */
-	bool isEmpty() const;
+	virtual bool isEmpty() const;
 
 	/**
 	 * Returns true if the list contains the data item
 	 */
-	bool contains(const DataType& item) const;
+	virtual bool contains(const DataType& item) const;
 
 	/**
 	 * Adds an item into the beginning of the list.

@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-//#include "Stack.h"
+#include "Stack.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -25,7 +25,13 @@ namespace StackADTTests
 		// Push
 		TEST_METHOD(Push)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			Stack<int> stack;
+			
+			Assert::IsTrue(stack.isEmpty());
+			stack.push(1);
+			Assert::IsFalse(stack.isEmpty());
+
+			/*Assert::IsTrue(1, stack.getLength());*/
 		}
 
 		// Pop

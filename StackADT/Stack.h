@@ -17,6 +17,16 @@ template <typename DataType>
 class Stack : protected List<DataType>
 {
 public:
+	~Stack(); // Destructor
+
+	/**
+	 * Exposes lists's isEmpty
+	 */
+	bool isEmpty();
+
+	/**
+	 * Push adds an item to the top of the stack.
+	 */
 	bool push(const DataType& item);
 };
 

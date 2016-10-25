@@ -8,9 +8,21 @@
 #include "Stack.h"
 
 template <typename DataType>
+Stack<DataType>::~Stack()
+{
+	// Do we need to explicitly call?
+}
+
+template <typename DataType>
+bool Stack<DataType>::isEmpty()
+{
+	return List<DataType>::isEmpty();
+}
+
+template <typename DataType>
 bool Stack<DataType>::push(const DataType& item)
 {
-	addFirst(item);
+	return addFirst(item);
 }
 
 #endif
