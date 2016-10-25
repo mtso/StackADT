@@ -96,13 +96,10 @@ bool List<DataType>::remove(const DataType& toRemove)
 	return shouldRemoveItem;
 }
 
-#include <iostream>
 
 template <typename DataType>
 void List<DataType>::printList() const
 {
-	using namespace std;
-
 	if (!isEmpty()) {
 		cout << head->getData() << endl;
 		Node<DataType>* nextNode = head->getNext();
@@ -116,5 +113,23 @@ void List<DataType>::printList() const
 		cout << "Empty List" << endl;
 	}
 }
+
+template <typename DataType>
+void List<DataType>::printListTo(ostream& out) const
+{
+	if (!isEmpty()) {
+		out << head->getData() << endl;
+		Node<DataType>* nextNode = head->getNext();
+		while (nextNode != nullptr)
+		{
+			out << nextNode->getData() << endl;
+			nextNode = nextNode->getNext();
+		}
+	}
+	else {
+		out << "Empty List" << endl;
+	}
+}
+
 
 #endif

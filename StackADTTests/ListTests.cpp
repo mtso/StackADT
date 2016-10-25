@@ -2,8 +2,10 @@
 #include "CppUnitTest.h"
 #include "List.h"
 #include <string>
+#include <iostream>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+using namespace std;
 
 namespace StackADTTests
 {
@@ -18,11 +20,15 @@ namespace StackADTTests
 			Assert::AreEqual(0, list.getLength());
 			Assert::IsTrue(list.isEmpty());
 
-			using namespace std;
 			List<string> coolshit;
+			stringstream testStream;
 
 			coolshit.addFirst("Cambodia");
-			coolshit.printList();
+			coolshit.printListTo(testStream);
+
+			string actual = testStream.str();
+			string expected = "Cambodia\n";
+			Assert::AreEqual(expected, actual);
 		}
 
 		// Destroy

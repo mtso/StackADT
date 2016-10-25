@@ -6,6 +6,9 @@
 #define STACKADT_LIST_H
 
 #include "Node.h"
+#include <iostream>
+
+using namespace std;
 
 /**
  * Linked List implementation of Bag ADT
@@ -63,6 +66,8 @@ public:
 	*/
 
 	void printList() const;
+
+	void printListTo(ostream& out) const;
 };
 
 #include "List.cpp"
