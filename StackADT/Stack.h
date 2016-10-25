@@ -22,12 +22,22 @@ public:
 	/**
 	 * Exposes lists's isEmpty
 	 */
-	bool isEmpty();
+	bool isEmpty() const;
+
+	/**
+	 * Returns the number of items in the stack.
+	 */
+	int getLength() const;
 
 	/**
 	 * Push adds an item to the top of the stack.
 	 */
 	bool push(const DataType& item);
+
+	/**
+	 * Pop removes the first item from the stack.
+	 */
+	bool pop();
 };
 
 #include "Stack.cpp"

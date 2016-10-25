@@ -30,20 +30,40 @@ namespace StackADTTests
 			Assert::IsTrue(stack.isEmpty());
 			stack.push(1);
 			Assert::IsFalse(stack.isEmpty());
-
-			/*Assert::IsTrue(1, stack.getLength());*/
 		}
 
 		// Pop
 		TEST_METHOD(Pop)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			Stack<int> stack;
+			stack.push(1);
+			Assert::IsFalse(stack.isEmpty());
+			stack.pop();
+			Assert::IsTrue(stack.isEmpty());
 		}
 
 		// isEmpty
 		TEST_METHOD(IsEmpty)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			Stack<int> stack;
+
+			Assert::IsTrue(stack.isEmpty());
+			stack.push(1);
+			Assert::IsFalse(stack.isEmpty());
+		}
+
+		// isEmpty
+		TEST_METHOD(GetLength)
+		{
+			Stack<int> stack;
+
+			Assert::AreEqual(0, stack.getLength());
+			stack.push(1);
+			Assert::AreEqual(1, stack.getLength());
+
+			stack.pop();
+			Assert::AreEqual(0, stack.getLength());
+
 		}
 
 	};

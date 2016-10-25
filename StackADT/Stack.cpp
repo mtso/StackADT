@@ -14,15 +14,29 @@ Stack<DataType>::~Stack()
 }
 
 template <typename DataType>
-bool Stack<DataType>::isEmpty()
+bool Stack<DataType>::isEmpty() const
 {
+	// Return superclass's isEmpty function.
 	return List<DataType>::isEmpty();
+}
+
+template <typename DataType>
+int Stack<DataType>::getLength() const
+{
+	// Return superclass's getLength function.
+	return List<DataType>::getLength();
 }
 
 template <typename DataType>
 bool Stack<DataType>::push(const DataType& item)
 {
 	return addFirst(item);
+}
+
+template <typename DataType>
+bool Stack<DataType>::pop()
+{
+	return removeFirst();
 }
 
 #endif
