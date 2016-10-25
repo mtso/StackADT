@@ -32,6 +32,12 @@ bool List<DataType>::isEmpty() const
 }
 
 template <typename DataType>
+bool List<DataType>::contains(const DataType& item) const
+{
+	return getPointerTo(item) != nullptr;
+}
+
+template <typename DataType>
 bool List<DataType>::addFirst(const DataType& newItem)
 {
 	if (length == 0)
@@ -90,42 +96,28 @@ bool List<DataType>::remove(const DataType& toRemove)
 	return shouldRemoveItem;
 }
 
+
 template <typename DataType>
 void List<DataType>::printList() const
 {
+	printListTo(cout);
+}
+
+template <typename DataType>
+void List<DataType>::printListTo(ostream& out) const
+{
 	if (!isEmpty()) {
-		cout << head->getData() << endl;
+		out << head->getData() << endl;
 		Node<DataType>* nextNode = head->getNext();
 		while (nextNode != nullptr)
 		{
-			cout << nextNode->getData() << endl;
+			out << nextNode->getData() << endl;
 			nextNode = nextNode->getNext();
-		} 
+		}
 	}
 	else {
-		cout << "Empty List" << endl;
+		out << "Empty List" << endl;
 	}
 }
-
-//template <typename DataType>
-//List::Add(DataType item)
-//{
-//	if (head == nullptr)
-//	{
-//		Node<DataType>* newItem = Node<DataType>(item);
-//		head = newItem;
-//		tail = newItem;
-//		newItem->setNext(nullptr);
-//	}
-//
-//	// Problem, get current node to point to new node.
-//	else
-//	{
-//		Node<DataType>* newItem = Node<DataType>(item);
-//		// no
-//		tail = newItem;
-//		newItem->setNext(nullptr);
-//	}
-//}
 
 #endif

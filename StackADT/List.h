@@ -6,6 +6,9 @@
 #define STACKADT_LIST_H
 
 #include "Node.h"
+#include <iostream>
+
+using namespace std;
 
 /**
  * Linked List implementation of Bag ADT
@@ -42,6 +45,11 @@ public:
 	bool isEmpty() const;
 
 	/**
+	 * Returns true if the list contains the data item
+	 */
+	bool contains(const DataType& item) const;
+
+	/**
 	 * Adds an item into the beginning of the list.
 	 * @param newItem The new <DataType> item to add.
 	 * @returns True if successful, false if unsuccessful.
@@ -58,6 +66,12 @@ public:
 	*/
 
 	void printList() const;
+
+	/**
+	 * Print contents of list into an output stream.
+	 * Used for testing.
+	 */
+	void printListTo(ostream& out) const;
 };
 
 #include "List.cpp"
