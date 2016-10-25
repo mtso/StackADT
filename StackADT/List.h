@@ -14,7 +14,7 @@
 template <typename DataType>
 class List 
 {
-private:
+protected:
 	// Pointer to the first node of the list.
 	Node<DataType>* head;
 	
@@ -40,6 +40,11 @@ public:
 	 * @returns True if the list is empty, false if not.
 	 */
 	bool isEmpty() const;
+
+	/**
+	 * Returns true if the list contains the data item
+	 */
+	bool contains(const DataType& item) const;
 
 	/**
 	 * Adds an item into the beginning of the list.

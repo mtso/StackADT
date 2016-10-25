@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 #include "List.h"
+#include <string>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -16,6 +17,12 @@ namespace StackADTTests
 			List<int> list = List<int>();
 			Assert::AreEqual(0, list.getLength());
 			Assert::IsTrue(list.isEmpty());
+
+			using namespace std;
+			List<string> coolshit;
+
+			coolshit.addFirst("Cambodia");
+			coolshit.printList();
 		}
 
 		// Destroy
@@ -58,10 +65,13 @@ namespace StackADTTests
 		}
 
 		// Search
-		// should return the index of the item or -1 if not found
+		// search the list for a value
 		TEST_METHOD(Search)
 		{
-			Assert::Fail(L"Test case has not been written yet.");
+			List<int> list = List<int>();
+			list.addFirst(9);
+			Assert::IsTrue(list.contains(9));
+			Assert::IsFalse(list.contains(0));
 		}
 
 		// Clear
