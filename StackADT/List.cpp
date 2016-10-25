@@ -17,15 +17,7 @@ List<DataType>::List()
 template <typename DataType>
 List<DataType>::~List()
 {
-	while (!isEmpty())
-	{
-		Node<DataType>* toRemovePointer = head;
-		head = head->getNext();
-		toRemovePointer->setNext(nullptr);
-		delete toRemovePointer;
-		toRemovePointer = nullptr;
-		length--;
-	}
+	clear();
 }
 
 template <typename DataType>
