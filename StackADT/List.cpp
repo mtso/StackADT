@@ -117,7 +117,6 @@ bool List<DataType>::removeFirst()
 	}
 }
 
-
 template <typename DataType>
 void List<DataType>::clear()
 {

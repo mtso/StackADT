@@ -28,6 +28,12 @@ int Stack<DataType>::getLength() const
 }
 
 template <typename DataType>
+void Stack<DataType>::clear()
+{
+	List<DataType>::clear();
+}
+
+template <typename DataType>
 bool Stack<DataType>::push(const DataType& item)
 {
 	return addFirst(item);

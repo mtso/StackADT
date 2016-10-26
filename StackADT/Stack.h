@@ -30,6 +30,11 @@ public:
 	int getLength() const;
 
 	/**
+	 * Expose clear
+	 */
+	void clear();
+
+	/**
 	 * Push adds an item to the top of the stack.
 	 */
 	bool push(const DataType& item);
