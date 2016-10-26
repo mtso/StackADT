@@ -41,6 +41,7 @@ bool List<DataType>::contains(const DataType& item) const
 template <typename DataType>
 bool List<DataType>::addFirst(const DataType& newItem)
 {
+	// TODO: What happens if no new node could be allocated memory?
 	if (length == 0)
 	{
 		head = new Node<DataType>(newItem);

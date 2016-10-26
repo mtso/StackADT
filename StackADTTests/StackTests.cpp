@@ -66,5 +66,17 @@ namespace StackADTTests
 
 		}
 
+		TEST_METHOD(LotsOfInts)
+		{
+			Stack<int> stack;
+
+			for (int i = 0; i < 1000000; i++)
+			{
+				Assert::AreEqual(i, stack.getLength());
+				stack.push(i);
+				Assert::AreEqual(i + 1, stack.getLength());
+			}
+		}
+
 	};
 }
