@@ -10,15 +10,10 @@ namespace StackADTTests
 	{
 	public:
 
-		// Create
-		TEST_METHOD(StackConstructor)
-		{
-			Assert::Fail(L"Test case has not been written yet.");
-		}
-
 		// Destroy
 		TEST_METHOD(StackDestructor)
 		{
+			// TODO: Make sure stack destructor is called.
 			Assert::Fail(L"Test case has not been written yet.");
 		}
 

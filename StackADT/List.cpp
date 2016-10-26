@@ -123,12 +123,7 @@ void List<DataType>::clear()
 {
 	while (!isEmpty())
 	{
-		Node<DataType>* toRemovePointer = head;
-		head = head->getNext();
-		toRemovePointer->setNext(nullptr);
-		delete toRemovePointer;
-		toRemovePointer = nullptr;
-		length--;
+		removeFirst();
 	}
 }
 
