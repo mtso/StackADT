@@ -22,6 +22,9 @@ int main()
 		cout << numbers.pop() << endl;
 	}
 
+	List<int>* list = new List<int>();
+	list->addFirst(1);
+	delete list;
 
 	system("pause");
 	return 0;

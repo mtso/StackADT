@@ -74,6 +74,7 @@
     <ClInclude Include="Collection.h" />
     <ClInclude Include="Currency.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="Logger\Logger.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
