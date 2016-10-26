@@ -4,20 +4,23 @@
 
 #include "Logger.h"
 
-void Logger::log(const string& message)
+void Logger::log(const std::string& message)
 {
 	static bool isFirstTime = true;
-	static ofstream logFile;
+	static std::ofstream logFile;
+
+	time_t now = time(0);
 
 	if (isFirstTime)
 	{
 		isFirstTime = false;
-		logFile.open("log");
-	}
-	else
-	{
+		logFile.open("stackadt_log.txt", std::ios::app);
 
+		logFile << "================================" << std::endl;
+		logFile << now << ": New logging session" << std::endl;
 	}
+	
+	logFile << now << ": " << message << std::endl;
 }
 
 #endif
