@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 #include "Stack.h"
+#include "Currency.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -9,6 +10,12 @@ namespace StackADTTests
 	TEST_CLASS(StackTests)
 	{
 	public:
+
+		TEST_METHOD(CurrencyStack)
+		{
+			Currency* balance = new Dollar(10, 150);
+			delete balance;
+		}
 
 		// Destroy
 		TEST_METHOD(StackDestructor)
@@ -33,8 +40,9 @@ namespace StackADTTests
 			Stack<int> stack;
 			stack.push(1);
 			Assert::IsFalse(stack.isEmpty());
-			stack.pop();
+			int poppedValue = stack.pop();
 			Assert::IsTrue(stack.isEmpty());
+			Assert::AreEqual(1, poppedValue);
 		}
 
 		// isEmpty
@@ -61,6 +69,7 @@ namespace StackADTTests
 
 		}
 
+        /*
 		TEST_METHOD(LotsOfInts)
 		{
 			Stack<int> stack;
@@ -72,6 +81,6 @@ namespace StackADTTests
 				Assert::AreEqual(i + 1, stack.getLength());
 			}
 		}
-
+        */
 	};
 }
