@@ -11,6 +11,15 @@ template <typename DataType>
 Stack<DataType>::~Stack()
 {
 	// Do we need to explicitly call?
+
+	ofstream logFile;
+	time_t now = time(0);
+
+	logFile.open("stackadt_log.txt", ios::app);
+	logFile << now << ": ~Stack called" << endl;
+	logFile.close();
+
+	cout << "~Stack called" << endl;
 }
 
 template <typename DataType>
