@@ -40,9 +40,16 @@ bool Stack<DataType>::push(const DataType& item)
 }
 
 template <typename DataType>
-bool Stack<DataType>::pop()
+ DataType Stack<DataType>::pop()
 {
-	return removeFirst();
+	int value = head->getData();
+	Node<DataType>* toRemovePointer = head;
+	head = head->getNext();
+	toRemovePointer->setNext(nullptr);
+	delete toRemovePointer;
+	toRemovePointer = nullptr;
+	length--;
+	return value;
 }
 
 #endif

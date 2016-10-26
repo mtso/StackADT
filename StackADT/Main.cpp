@@ -2,29 +2,27 @@
 // Lab 2: Stack ADT
 // CIS 22C F2016: Adrian Marroquin, Matthew Tso
 
-#include "List.h"
+#include "Stack.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
 int main()
-{
-	//List<string> coolshit;
+{	
+	Stack<int> numbers = Stack<int>();
 
-	//coolshit.addFirst("Cambodia");
-	//coolshit.addFirst("Solar Panels");
-	//coolshit.addFirst("DC Comics");
-	//coolshit.addFirst("Reagonimics");
+	for (int i = 0; i <= 10; i++)
+	{
+		numbers.push(i);
+	}
 
-	//cout << "CoolShit has " << coolshit.getLength() << " items" << endl;
-	//coolshit.printList();
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << numbers.pop() << endl;
+	}
 
-	//coolshit.remove("DC Comics");
 
-	//cout << "CoolShit has " << coolshit.getLength() << " items" << endl;
-	//coolshit.printList();
-
-	//system("pause");
+	system("pause");
 	return 0;
 }

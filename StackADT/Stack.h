@@ -42,7 +42,7 @@ public:
 	/**
 	 * Pop removes the first item from the stack.
 	 */
-	bool pop();
+	DataType pop();
 };
 
 #include "Stack.cpp"
