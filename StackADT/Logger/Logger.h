@@ -1,25 +1,17 @@
 
+#ifndef LOGGER_H
+#define LOGGER_H
+
 #include <fstream>
 #include <string>
 #include <time.h>
 
 using namespace std;
 
-namespace logger
+namespace Logger
 {
-	void log(const string& message)
-	{
-		static bool isFirstTime = true;
-		static ofstream logFile;
-
-		if (isFirstTime)
-		{
-			isFirstTime = false;
-			logFile.open("log");
-		}
-		else
-		{
-
-		}
-	}
+	void log(const string& message);
 }
+
+#include "Logger.cpp"
+#endif
