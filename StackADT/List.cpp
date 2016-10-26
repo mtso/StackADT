@@ -19,14 +19,7 @@ List<DataType>::~List()
 {
 	clear();
 	
-	ofstream logFile;
-	time_t now = time(0);
-	
-	logFile.open("stackadt_log.txt", ios::app);
-	logFile << now << ": ~List called" << endl;
-	logFile.close();
-
-	cout << "List destructor called" << endl;
+	Logger::log("~List called");
 }
 
 template <typename DataType>

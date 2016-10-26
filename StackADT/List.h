@@ -7,8 +7,7 @@
 
 #include "Node.h"
 #include <iostream>
-#include <fstream>
-#include <time.h>
+#include "Logger\Logger.h"
 
 using namespace std;
 

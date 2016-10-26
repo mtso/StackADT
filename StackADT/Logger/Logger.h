@@ -6,11 +6,9 @@
 #include <string>
 #include <time.h>
 
-using namespace std;
-
 namespace Logger
 {
-	void log(const string& message);
+	inline void log(const std::string& message);
 }
 
 #include "Logger.cpp"
