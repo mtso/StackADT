@@ -6,6 +6,7 @@
 #define STACKADT_LIST_CPP
 
 #include "List.h"
+#include <time.h>
 
 template <typename DataType>
 List<DataType>::List()
@@ -18,6 +19,13 @@ template <typename DataType>
 List<DataType>::~List()
 {
 	clear();
+	
+	ofstream logFile;
+	//time_t time = time(NULL);
+	
+	logFile.open("/var/log");
+	logFile << ": ~List called" << endl;
+	logFile.close();
 }
 
 template <typename DataType>
