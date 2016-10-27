@@ -16,9 +16,10 @@ namespace StackADTTests
 		{
 			Queue<int> queue;
 
-			//queue.enqueue(2);
+			Assert::IsTrue(queue.isEmpty());
+			queue.enqueue(2);
 
-			Assert::Fail();
+			Assert::IsFalse(queue.isEmpty());
 		}
 
 		TEST_METHOD(QueueDestructor)
