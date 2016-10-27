@@ -4,7 +4,6 @@
 #include "Currency.h"
 #include <vector>
 #include <fstream>
-#include <iostream>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std;
@@ -15,6 +14,7 @@ namespace StackADTTests
 	{
 	public:
 
+		// Test the use of a Currency object in a Stack
 		TEST_METHOD(CurrencyStack)
 		{
 			Stack<Currency*> balances;
@@ -97,7 +97,7 @@ namespace StackADTTests
 			Assert::IsFalse(stack.isEmpty());
 		}
 
-		// isEmpty
+		// getLength
 		TEST_METHOD(GetLength)
 		{
 			Stack<int> stack;

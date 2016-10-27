@@ -72,6 +72,14 @@ namespace StackADTTests
 			coolshit.addFirst("DC Comics");
 			coolshit.addFirst("Freakonomics");
 			Assert::AreEqual(4, coolshit.getLength());
+
+			stringstream testOutput;
+			coolshit.printListTo(testOutput);
+			string actual = testOutput.str();
+			// The expected string should be 
+			// the list of values in reverse.
+			string expected = "Freakonomics\nDC Comics\nSolar Panels\nCambodia\n";
+			Assert::AreEqual(expected, actual);
 		}
 
 		// Delete
