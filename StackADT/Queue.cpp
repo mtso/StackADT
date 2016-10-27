@@ -26,4 +26,12 @@ bool Queue<DataType>::enqueue(const DataType& item)
 	return addFirst(item);
 }
 
+T_DATA
+DataType Queue<DataType>::dequeue()
+{
+	DataType returnItem = tail->getData();
+	removeLast();
+	return returnItem;
+}
+
 #endif

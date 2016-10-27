@@ -29,7 +29,7 @@ public:
 	 * Removes an item from the end of the list
 	 * (the item that the tail is pointing to)
 	 */
-	// DataType& dequeue();
+	DataType dequeue();
 };
 
 #include "Queue.cpp"
