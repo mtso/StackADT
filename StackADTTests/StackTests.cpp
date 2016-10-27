@@ -2,8 +2,12 @@
 #include "CppUnitTest.h"
 #include "Stack.h"
 #include "Currency.h"
+#include <vector>
+#include <fstream>
+#include <iostream>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+using namespace std;
 
 namespace StackADTTests
 {
@@ -15,13 +19,34 @@ namespace StackADTTests
 		{
 			Currency* balance = new Dollar(10, 150);
 			delete balance;
+			Assert::Fail();
 		}
 
-		// Destroy
+		// Makes sure the stack destructor was called
+		// by reading the log file from the end.
 		TEST_METHOD(StackDestructor)
 		{
-			// TODO: Make sure stack destructor is called.
-			Assert::Fail(L"Test case has not been written yet.");
+			Stack<int>* stack = new Stack<int>();
+			stack->push(1);
+			delete stack;
+
+			ifstream log("stackadt_log.txt");
+			if (log.is_open())
+			{
+				vector<string> reversedLog;
+				string line;
+
+				while (getline(log, line))
+				{
+					reversedLog.insert(reversedLog.begin(), line);
+				}
+
+				string listLog = util::removeTimestamp(reversedLog[0]);
+				string stackLog = util::removeTimestamp(reversedLog[1]);
+
+				Assert::AreEqual(string("~List called"), listLog);
+				Assert::AreEqual(string("~Stack called"), stackLog);
+			}
 		}
 
 		// Push
@@ -69,8 +94,8 @@ namespace StackADTTests
 
 		}
 
-        /*
-		TEST_METHOD(LotsOfInts)
+        
+		/*TEST_METHOD(LotsOfInts)
 		{
 			Stack<int> stack;
 
@@ -80,7 +105,7 @@ namespace StackADTTests
 				stack.push(i);
 				Assert::AreEqual(i + 1, stack.getLength());
 			}
-		}
-        */
+		}*/
+        
 	};
 }

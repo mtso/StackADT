@@ -5,22 +5,15 @@
 #include "Stack.h"
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 int main()
 {	
-	Stack<int> numbers = Stack<int>();
-
-	for (int i = 0; i <= 10; i++)
-	{
-		numbers.push(i);
-	}
-
-	for (int i = 0; i <= 10; i++)
-	{
-		cout << numbers.pop() << endl;
-	}
+	Stack<int>* stack = new Stack<int>();
+	stack->push(1);
+	delete stack;
 
 	List<int>* list = new List<int>();
 	list->addFirst(1);
