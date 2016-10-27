@@ -21,6 +21,11 @@ public:
 	bool isEmpty();
 
 	/**
+	 * Expose getLength
+	 */
+	int getLength();
+
+	/**
 	 * Adds an item to the top of the list.
 	 */
 	bool enqueue(const DataType& item);
