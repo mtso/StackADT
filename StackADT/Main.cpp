@@ -6,6 +6,7 @@
 #include "Currency.h"
 #include <iostream>
 #include <string>
+#include <vector>
 
 template <typename T>
 void stackTest(T data);
@@ -14,7 +15,6 @@ using namespace std;
 
 int main()
 {	
-
 	stackTest(45);
 	stackTest("California");
 	stackTest(1.45);

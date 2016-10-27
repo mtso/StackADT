@@ -19,7 +19,7 @@ List<DataType>::~List()
 {
 	clear();
 	
-	Logger::log("~List called");
+	util::log("~List called");
 }
 
 template <typename DataType>

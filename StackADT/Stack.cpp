@@ -12,7 +12,7 @@ Stack<DataType>::~Stack()
 {
 	// Do we need to explicitly call?
 
-	Logger::log("~Stack called");
+	util::log("~Stack called");
 }
 
 template <typename DataType>

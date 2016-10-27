@@ -3,6 +3,7 @@
 #include "List.h"
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std;
@@ -31,16 +32,29 @@ namespace StackADTTests
 			Assert::AreEqual(expected, actual);
 		}
 
-		// Destroy
+		// Makes sure the destructor was called
+		// by reading the log file from the end.
 		TEST_METHOD(ListDestructor)
 		{
-			// TODO: Make this better!
-			List<int>* listPtr = new List<int>();
-			listPtr->addFirst(1);
-			listPtr->clear();
-			delete listPtr;
-			listPtr = nullptr;
-			Assert::IsNull(listPtr);
+			List<int>* list = new List<int>();
+			list->addFirst(1);
+			delete list;
+
+			ifstream log("stackadt_log.txt");
+			if (log.is_open())
+			{
+				vector<string> reversedLog;
+				string line;
+
+				while (getline(log, line))
+				{
+					reversedLog.insert(reversedLog.begin(), line);
+				}
+
+				string listLog = util::removeTimestamp(reversedLog[0]);
+
+				Assert::AreEqual(string("~List called"), listLog);
+			}
 		}
 
 		// Add (an item to top of list)
