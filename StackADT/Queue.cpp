@@ -7,6 +7,16 @@
 
 #include "Queue.h"
 
-// T_DATA bool Queue<DataType>::isEmpty() {}
+T_DATA
+Queue<DataType>::~Queue()
+{
+	util::log("~Queue called");
+}
+
+T_DATA
+bool Queue<DataType>::isEmpty() 
+{
+	return List<DataType>::isEmpty();
+}
 
 #endif
