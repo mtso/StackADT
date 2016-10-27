@@ -72,7 +72,7 @@ bool List<DataType>::addLast(const DataType& newItem)
 	}
 	else
 	{
-		tail->setNext(new Node<DataType>(newItem);
+		tail->setNext(new Node<DataType>(newItem));
 		tail = tail->getNext();
 		length++;
 		return true;
