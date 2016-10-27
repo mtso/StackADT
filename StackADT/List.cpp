@@ -42,6 +42,24 @@ bool List<DataType>::contains(const DataType& item) const
 }
 
 template <typename DataType>
+Node<DataType>* List<DataType>::getPointerTo(const DataType& item) const
+{
+	Node<DataType>* search = head;
+	while (search != nullptr)
+	{
+		if (item == search->getData())
+		{
+			return search;
+		}
+		else
+		{
+			search = search->getNext();
+		}
+	}
+	return search;
+}
+
+template <typename DataType>
 bool List<DataType>::addFirst(const DataType& newItem)
 {
 	// TODO: What happens if no new node could be allocated memory?
@@ -77,24 +95,6 @@ bool List<DataType>::addLast(const DataType& newItem)
 		length++;
 		return true;
 	}
-}
-
-template <typename DataType>
-Node<DataType>* List<DataType>::getPointerTo(const DataType& item) const
-{
-	Node<DataType>* search = head;
-	while (search != nullptr)
-	{
-		if (item == search->getData())
-		{
-			return search;
-		}
-		else
-		{
-			search = search->getNext();
-		}
-	}
-	return search;
 }
 
 template <typename DataType>
@@ -150,6 +150,7 @@ bool List<DataType>::removeLast()
 		delete toRemovePointer;
 		toRemovePointer = nullptr;
 
+		// Point tail at the new tail of the list
 		Node<DataType>* iterator = head;
 		do
 		{
