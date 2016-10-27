@@ -97,7 +97,7 @@ Currency& Currency::operator+(const Currency &augend) {
 	setFull(getFull() + augend.getFull());
 	if (getPartial() + augend.getPartial() > getSubunit()) {
 		setPartial((getPartial() + augend.getPartial()) % getSubunit());
-		setFull((getPartial() + augend.getPartial()) / getSubunit());
+		setFull(getFull() + ((getPartial() + augend.getPartial()) / getSubunit()));
 	}
 	else {
 		setPartial(getPartial() + augend.getPartial());
@@ -146,11 +146,9 @@ Dollar::Dollar() {
 	subunit = 100;
 }
 
-Dollar::Dollar(int f, int p) {
+Dollar::Dollar(int f, int p) : Currency(f,p) {
 	fname = "Dollar";
 	pname = "Cent";
-	full = f;
-	partial = p;
 	subunit = 100;
 }
 
@@ -161,7 +159,7 @@ Currency& Dollar::operator+(const Currency &augend) {
 	setFull(getFull() + augend.getFull());
 	if (getPartial() + augend.getPartial() > getSubunit()) {
 		setPartial((getPartial() + augend.getPartial()) % getSubunit());
-		setFull((getPartial() + augend.getPartial()) / getSubunit());
+		setFull(getFull() + ((getPartial() + augend.getPartial()) / getSubunit())+1);
 	}
 	else {
 		setPartial(getPartial() + augend.getPartial());
