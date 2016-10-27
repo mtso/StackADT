@@ -10,6 +10,7 @@
 template <typename DataType>
 List<DataType>::List()
 	: head( nullptr )
+	, tail( nullptr )
 	, length( 0 )
 {
 }
@@ -56,7 +57,26 @@ bool List<DataType>::addFirst(const DataType& newItem)
 		head = newNode;
 		length++;
 		return true;
-	}	
+	}
+}
+
+template <typename DataType>
+bool List<DataType>::addLast(const DataType& newItem)
+{
+	if (length == 0)
+	{
+		head->setNext(tail);
+		tail = new Node<DataType>(newItem);
+		length++;
+		return true;
+	}
+	else
+	{
+		tail->setNext(new Node<DataType>(newItem);
+		tail = tail->getNext();
+		length++;
+		return true;
+	}
 }
 
 template <typename DataType>
@@ -116,6 +136,17 @@ bool List<DataType>::removeFirst()
 	else
 	{
 		return false;
+	}
+}
+
+
+template <typename DataType>
+bool List<DataType>::removeLast()
+{
+	if (!isEmpty())
+	{
+		Node<DataType>* toRemovePointer = tail;
+
 	}
 }
 
