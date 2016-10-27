@@ -13,9 +13,9 @@ void util::log(const std::string& message)
 	static std::ofstream logFile;
 
 	using namespace std::chrono;
-	__int64 now = duration_cast<milliseconds>(
-		system_clock::now().time_since_epoch()
-		).count();
+
+	system_clock::duration now = system_clock::now().time_since_epoch();
+	__int64 nowInMs = duration_cast<milliseconds>(now).count();
 
 	if (isFirstTime)
 	{
@@ -23,10 +23,10 @@ void util::log(const std::string& message)
 		logFile.open(LOG_FILENAME, std::ios::app);
 
 		logFile << "==================================" << std::endl;
-		logFile << now << ": New logging session" << std::endl;
+		logFile << nowInMs << ": New logging session" << std::endl;
 	}
 	
-	logFile << now << ": " << message << std::endl;
+	logFile << nowInMs << ": " << message << std::endl;
 }
 
 void util::clearLog()

@@ -6,7 +6,8 @@
 #include "Currency.h"
 #include <iostream>
 #include <string>
-#include <vector>
+
+#include "Logger\Logger.h"
 
 template <typename T>
 void stackTest(T data);
@@ -24,6 +25,7 @@ int main()
 
 	Currency* dollar = new Dollar(10, 50);
 	stackTestPointer(dollar);
+
 	system("pause");
 	return 0;
 }
