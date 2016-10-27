@@ -17,9 +17,26 @@ namespace StackADTTests
 
 		TEST_METHOD(CurrencyStack)
 		{
-			Currency* balance = new Dollar(10, 150);
-			delete balance;
-			Assert::Fail();
+			Stack<Currency*> balances;
+			balances.push(new Dollar(10, 160));       // Should normalize to $11.60
+			balances.push(new Dollar(10, 50));
+			balances.push(new Yen(10, 150));          // base 1000 should not normalize
+
+			Currency* yen = balances.pop();
+			Currency* dollar1 = balances.pop();
+			Currency* dollar2 = balances.pop();
+
+			Assert::AreEqual(10, yen->getFull());
+			Assert::AreEqual(10, dollar1->getFull());
+			Assert::AreEqual(11, dollar2->getFull()); // Should equal 11 after normalized initialization
+
+			*dollar1 = *dollar1 + *dollar2;           // $10.50 + $11.60 = $22.10
+
+			Assert::AreEqual(22, dollar1->getFull()); // Should equal 22
+
+			delete yen;
+			delete dollar1;
+			delete dollar2;
 		}
 
 		// Makes sure the stack destructor was called

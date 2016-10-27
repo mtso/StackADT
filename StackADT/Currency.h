@@ -32,6 +32,8 @@ public:
 	virtual Currency& operator+(const Currency &augend);
 	virtual Currency& operator-(const Currency &augend);
 
+	virtual bool operator== (const Currency& addend);
+
 	friend ostream& operator<<(ostream& outstream, const Currency &output);
 	friend istream& operator>>(istream& instream, Currency &input);
 };
