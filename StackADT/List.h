@@ -22,6 +22,9 @@ protected:
 	// Pointer to the first node of the list.
 	Node<DataType>* head;
 	
+	// Pointer to the last node of the list.
+	Node<DataType>* tail;
+	
 	// Keeps track of the number of list items.
 	int length;
 	
@@ -58,6 +61,13 @@ public:
 	bool addFirst(const DataType& newItem);
 
 	/**
+	* Adds an item into the end of the list.
+	* @param newItem The new <DataType> item to add.
+	* @returns True if successful, false if unsuccessful.
+	*/
+	bool addLast(const DataType& newItem);
+
+	/**
 	 * Removes an item from the list
 	 */
 	bool remove(const DataType& toRemove);
@@ -66,6 +76,11 @@ public:
 	 * Removes the first item from the list
 	 */
 	bool removeFirst();
+
+	/**
+	* Removes the first item from the list
+	*/
+	bool removeLast();
 
 	/**
 	 * Removes all the items from the list
