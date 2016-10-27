@@ -19,4 +19,10 @@ bool Queue<DataType>::isEmpty()
 	return List<DataType>::isEmpty();
 }
 
+T_DATA
+bool enqueue(const DataType& item)
+{
+	return List<DataType>::addLast(item);
+}
+
 #endif
