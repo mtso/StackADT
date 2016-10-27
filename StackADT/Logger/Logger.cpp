@@ -12,14 +12,17 @@ void util::log(const std::string& message)
 	static bool isFirstTime = true;
 	static std::ofstream logFile;
 
-	time_t now = time(0);
+	using namespace std::chrono;
+	__int64 now = duration_cast<milliseconds>(
+		system_clock::now().time_since_epoch()
+		).count();
 
 	if (isFirstTime)
 	{
 		isFirstTime = false;
-		logFile.open("stackadt_log.txt", std::ios::app);
+		logFile.open(LOG_FILENAME, std::ios::app);
 
-		logFile << "================================" << std::endl;
+		logFile << "==================================" << std::endl;
 		logFile << now << ": New logging session" << std::endl;
 	}
 	
@@ -28,7 +31,7 @@ void util::log(const std::string& message)
 
 void util::clearLog()
 {
-	std::ofstream log("stackadt_log.txt");
+	std::ofstream log(LOG_FILENAME);
 	log.close();
 }
 

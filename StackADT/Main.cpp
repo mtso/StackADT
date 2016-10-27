@@ -11,6 +11,9 @@
 template <typename T>
 void stackTest(T data);
 
+template <typename T>
+void stackTestPointer(T data);
+
 using namespace std;
 
 int main()
@@ -19,8 +22,8 @@ int main()
 	stackTest("California");
 	stackTest(1.45);
 
-	//Currency dollar(10, 50);
-	//stackTest(dollar);
+	Currency* dollar = new Dollar(10, 50);
+	stackTestPointer(dollar);
 	system("pause");
 	return 0;
 }
@@ -38,6 +41,24 @@ void stackTest(T data)
 	for (int i = 0; i <= 5; i++)
 	{
 		cout << theStack.pop() << endl;
+	}
+
+	cout << "Empty? " << boolalpha << theStack.isEmpty() << endl;
+}
+
+template <typename T>
+void stackTestPointer(T data)
+{
+	Stack<T> theStack = Stack<T>();
+
+	for (int i = 0; i <= 5; i++)
+	{
+		theStack.push(data);
+	}
+
+	for (int i = 0; i <= 5; i++)
+	{
+		cout << *(theStack.pop()) << endl;
 	}
 
 	cout << "Empty? " << boolalpha << theStack.isEmpty() << endl;

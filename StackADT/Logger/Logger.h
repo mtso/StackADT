@@ -7,7 +7,9 @@
 
 #include <fstream>
 #include <string>
-#include <time.h>
+#include <chrono>
+
+#define LOG_FILENAME "stackadt_log.txt"
 
 namespace util
 {
