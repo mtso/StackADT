@@ -149,6 +149,7 @@ bool List<DataType>::removeLast()
 		toRemovePointer->setNext(nullptr);
 		delete toRemovePointer;
 		toRemovePointer = nullptr;
+		length--;
 
 		// Point tail at the new tail of the list
 		Node<DataType>* iterator = head;

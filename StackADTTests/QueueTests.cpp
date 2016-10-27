@@ -20,6 +20,8 @@ namespace StackADTTests
 			queue.enqueue(2);
 
 			Assert::IsFalse(queue.isEmpty());
+
+			Assert::AreEqual(1, queue.getLength());
 		}
 
 		TEST_METHOD(QueueDestructor)
@@ -45,5 +47,6 @@ namespace StackADTTests
 				Assert::AreEqual(string("~Queue called"), queueLog);
 			}
 		}
+
 	};
 }
