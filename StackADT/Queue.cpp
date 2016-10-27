@@ -21,6 +21,7 @@ bool Queue<DataType>::isEmpty()
 }
 
 T_DATA
+<<<<<<< HEAD
 bool Queue<DataType>::enqueue(const DataType& item)
 {
 	return addFirst(item);
@@ -32,6 +33,11 @@ DataType Queue<DataType>::dequeue()
 	DataType returnItem = tail->getData();
 	removeLast();
 	return returnItem;
+=======
+bool enqueue(const DataType& item)
+{
+	return List<DataType>::addLast(item);
+>>>>>>> 42305917b0f65c7cfb947506eabbc4362e155a5b
 }
 
 #endif

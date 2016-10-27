@@ -146,7 +146,23 @@ bool List<DataType>::removeLast()
 	if (!isEmpty())
 	{
 		Node<DataType>* toRemovePointer = tail;
+		toRemovePointer->setNext(nullptr);
+		delete toRemovePointer;
+		toRemovePointer = nullptr;
 
+		Node<DataType>* iterator = head;
+		do
+		{
+			if (iterator->getNext() == nullptr)
+			{
+				tail = iterator;
+			}
+			else
+			{
+				iterator = iterator->getNext();
+			}
+		} while (iterator != nullptr);
+		return true;
 	}
 }
 
