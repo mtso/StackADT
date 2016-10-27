@@ -35,5 +35,8 @@
     <ClCompile Include="StackTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QueueTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

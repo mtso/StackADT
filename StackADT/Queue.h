@@ -10,7 +10,7 @@
 #define T_DATA template <typename DataType>
 
 T_DATA
-class Queue : protected List
+class Queue : protected List<DataType>
 {
 public:
 	~Queue();

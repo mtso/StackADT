@@ -36,6 +36,9 @@
     <ClCompile Include="Logger\Logger.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Node.h">
@@ -55,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="Logger\Logger.h">
       <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
