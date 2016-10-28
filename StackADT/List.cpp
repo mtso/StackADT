@@ -81,18 +81,19 @@ bool List<DataType>::addFirst(const DataType& newItem)
 template <typename DataType>
 bool List<DataType>::addLast(const DataType& newItem)
 {
+	Node<DataType>* newNode = new Node<DataType>(newItem);
 	if (length == 0)
 	{
-		head->setNext(tail);
-		tail = new Node<DataType>(newItem);
+		head = newNode;
+		tail = newNode;
 		length++;
 		return true;
 	}
 	else
 	{
-		tail->setNext(new Node<DataType>(newItem));
-		tail = tail->getNext();
+		tail->setNext(newNode);
 		length++;
+		tail = newNode;
 		return true;
 	}
 }
@@ -139,34 +140,6 @@ bool List<DataType>::removeFirst()
 	}
 }
 
-
-template <typename DataType>
-bool List<DataType>::removeLast()
-{
-	if (!isEmpty())
-	{
-		Node<DataType>* toRemovePointer = tail;
-		toRemovePointer->setNext(nullptr);
-		delete toRemovePointer;
-		toRemovePointer = nullptr;
-		length--;
-
-		// Point tail at the new tail of the list
-		Node<DataType>* iterator = head;
-		do
-		{
-			if (iterator->getNext() == nullptr)
-			{
-				tail = iterator;
-			}
-			else
-			{
-				iterator = iterator->getNext();
-			}
-		} while (iterator != nullptr);
-		return true;
-	}
-}
 
 template <typename DataType>
 void List<DataType>::clear()

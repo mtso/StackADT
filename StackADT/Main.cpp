@@ -3,6 +3,7 @@
 // CIS 22C F2016: Adrian Marroquin, Matthew Tso
 
 #include "Stack.h"
+#include "Queue.h"
 #include "Currency.h"
 #include <iostream>
 #include <string>
@@ -25,6 +26,15 @@ int main()
 
 	Currency* dollar = new Dollar(10, 50);
 	stackTestPointer(dollar);
+
+	// Queue Test
+	
+	Queue<int> iqueue;
+	iqueue.enqueue(45);
+	iqueue.enqueue(98);
+	cout << iqueue.dequeue() << endl;
+	cout << iqueue.dequeue() << endl;
+	cout << "Empty? " << boolalpha << iqueue.isEmpty() << endl;
 
 	system("pause");
 	return 0;

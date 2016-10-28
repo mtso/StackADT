@@ -29,14 +29,14 @@ int Queue<DataType>::getLength()
 T_DATA
 bool Queue<DataType>::enqueue(const DataType& item)
 {
-	return addFirst(item);
+	return addLast(item);
 }
 
 T_DATA
 DataType Queue<DataType>::dequeue()
 {
-	DataType returnItem = tail->getData();
-	removeLast();
+	DataType returnItem = head->getData();
+	List<DataType>::removeFirst();
 	return returnItem;
 }
 
