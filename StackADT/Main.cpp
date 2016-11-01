@@ -27,10 +27,12 @@ int main()
 	Queue<int> iqueue;
 	cout << "enqueue" << endl;
 	iqueue.enqueue(45);
+	cout << "enqueue" << endl;
 	iqueue.enqueue(98);
-	cout << iqueue.dequeue() << endl;
+	cout << "dequeue" << endl;
 	cout << iqueue.dequeue() << endl;
 	cout << "dequeue" << endl;
+	cout << iqueue.dequeue() << endl;
 	cout << "Empty? " << boolalpha << iqueue.isEmpty() << endl;
 
 	system("pause");
