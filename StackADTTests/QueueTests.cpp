@@ -11,17 +11,42 @@ namespace StackADTTests
 	{
 	public:
 
+		// isEmpty
+		TEST_METHOD(IsEmpty)
+		{
+			Queue<int> queue;
+			Assert::IsTrue(queue.isEmpty());
+			Assert::AreEqual(0, queue.getLength());
+			queue.enqueue(8);
+			Assert::IsFalse(queue.isEmpty());
+		}
+
 		// Enqueue
 		TEST_METHOD(Enqueue)
 		{
-			Queue<int> queue;
+			Queue<int> iqueue;
 
-			Assert::IsTrue(queue.isEmpty());
-			queue.enqueue(2);
+			Assert::IsTrue(iqueue.isEmpty());
+			iqueue.enqueue(2);
+			Assert::IsFalse(iqueue.isEmpty());
+			Assert::AreEqual(1, iqueue.getLength());
 
-			Assert::IsFalse(queue.isEmpty());
+			Queue<string> strQ;
+			strQ.enqueue("two");
+			string dQstring = strQ.dequeue();
+			Assert::AreEqual<string>("two", dQstring);
+		}
 
-			Assert::AreEqual(1, queue.getLength());
+		// Dequeue
+		TEST_METHOD(Dequeue)
+		{
+			Queue<int> iqueue;
+			iqueue.enqueue(45);
+			iqueue.enqueue(98);
+			Assert::AreEqual(2, iqueue.getLength());
+			Assert::AreEqual(45, iqueue.dequeue());
+			Assert::AreEqual(98, iqueue.dequeue());
+			Assert::IsTrue(iqueue.isEmpty());
 		}
 
 		TEST_METHOD(QueueDestructor)

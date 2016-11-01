@@ -73,8 +73,8 @@
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Collection.h" />
     <ClInclude Include="Currency.h" />
+    <ClInclude Include="Collection.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Logger\Logger.h" />
     <ClInclude Include="Node.h" />

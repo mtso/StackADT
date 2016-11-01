@@ -85,6 +85,11 @@ namespace StackADTTests
 			int poppedValue = stack.pop();
 			Assert::IsTrue(stack.isEmpty());
 			Assert::AreEqual(1, poppedValue);
+
+			Stack<string> strStack;
+			strStack.push("two");
+			string poppedString = strStack.pop();
+			Assert::AreEqual<string>("two", poppedString);
 		}
 
 		// isEmpty

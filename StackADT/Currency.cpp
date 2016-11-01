@@ -83,7 +83,7 @@ int Currency::getSubunit() const {
 	return subunit;
 }
 
-bool Currency::operator== (const Currency& addend)
+bool Currency::operator== (const Currency& addend) const
 {
 	if (getFull() == addend.getFull() && getPartial() == addend.getPartial())
 	{
