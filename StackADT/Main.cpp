@@ -8,24 +8,14 @@
 #include <iostream>
 #include <string>
 
-#include "Logger\Logger.h"
-
 template <typename T>
-void stackTest(T data);
-
-template <typename T>
-void stackTestPointer(T data);
+void queueDemo(const T& item);
 
 using namespace std;
 
 int main()
-{	
-	stackTest(45);
-	stackTest("California");
-	stackTest(1.45);
-
-	Currency* dollar = new Dollar(10, 50);
-	stackTestPointer(dollar);
+{
+	queueDemo(2);
 
 	// Queue Test
 	cout << "The following is the queue test" << endl;
@@ -43,37 +33,22 @@ int main()
 }
 
 template <typename T>
-void stackTest(T data)
+void queueDemo(const T& item)
 {
-	Stack<T> theStack = Stack<T>();
+	Queue<T> demo;
 
-	for (int i = 0; i <= 5; i++)
+	for (int i = 0; i < 5; i++)
 	{
-		theStack.push(data);
+		demo.enqueue(i);
 	}
 
-	for (int i = 0; i <= 5; i++)
+	for (int j = 0; j < demo.getLength(); j++)
 	{
-		cout << theStack.pop() << endl;
+		cout << demo.dequeue() << endl;
 	}
 
-	cout << "Empty? " << boolalpha << theStack.isEmpty() << endl;
-}
-
-template <typename T>
-void stackTestPointer(T data)
-{
-	Stack<T> theStack = Stack<T>();
-
-	for (int i = 0; i <= 5; i++)
+	if (demo.isEmpty())
 	{
-		theStack.push(data);
+		cout << "Queue is now empty." << endl;
 	}
-
-	for (int i = 0; i <= 5; i++)
-	{
-		cout << *(theStack.pop()) << endl;
-	}
-
-	cout << "Empty? " << boolalpha << theStack.isEmpty() << endl;
 }
