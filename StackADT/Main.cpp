@@ -28,12 +28,14 @@ int main()
 	stackTestPointer(dollar);
 
 	// Queue Test
-	
+	cout << "The following is the queue test" << endl;
 	Queue<int> iqueue;
+	cout << "enqueue" << endl;
 	iqueue.enqueue(45);
 	iqueue.enqueue(98);
 	cout << iqueue.dequeue() << endl;
 	cout << iqueue.dequeue() << endl;
+	cout << "dequeue" << endl;
 	cout << "Empty? " << boolalpha << iqueue.isEmpty() << endl;
 
 	system("pause");
