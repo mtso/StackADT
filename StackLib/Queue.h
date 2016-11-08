@@ -10,7 +10,7 @@
 #define T_DATA template <typename DataType>
 
 T_DATA
-class Queue : protected List<DataType>
+class Queue : protected StackLib::List<DataType>
 {
 public:
 	~Queue();
@@ -37,5 +37,5 @@ public:
 	DataType dequeue();
 };
 
-#include "Queue.cpp"
+//#include "Queue.cpp"
 #endif

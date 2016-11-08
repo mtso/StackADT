@@ -29,5 +29,5 @@ namespace util
 	inline std::string removeTimestamp(const std::string& str);
 }
 
-#include "Logger.cpp"
+//#include "Logger.cpp"
 #endif
