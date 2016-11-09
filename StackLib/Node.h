@@ -66,5 +66,4 @@ public:
 	void setData(const DataType& newData);
 };
 
-#include "Node.cpp"
 #endif

@@ -5,51 +5,49 @@
 #ifndef STACKADT_STACK_H
 #define STACKADT_STACK_H
 
-#include "List.h"
-
-namespace StackLib {
 /*
  * Stack Class
  * The Stack object provides Push and Pop functions.
  * The Class provides the boolean function isEmpty.
  */
-	template <typename DataType>
-	class Stack : protected List<DataType>
-	{
-	public:
-		~Stack(); // Destructor
 
-		/**
-			* Exposes lists's isEmpty
-			*/
-		bool isEmpty() const;
+#include "List.h"
 
-		/**
-			* Returns the number of items in the stack.
-			*/
-		int getLength() const;
+template <typename DataType>
+class Stack : protected List<DataType>
+{
+public:
+	~Stack(); // Destructor
 
-		/**
-			* Expose clear
-			*/
-		void clear();
+	/**
+	 * Exposes lists's isEmpty
+	 */
+	bool isEmpty() const;
 
-		/**
-			* Push adds an item to the top of the stack.
-			*/
-		bool push(const DataType& item);
+	/**
+	 * Returns the number of items in the stack.
+	 */
+	int getLength() const;
 
-		/**
-			* Pop removes the first item from the stack.
-			*/
-		DataType pop();
+	/**
+	 * Expose clear
+	 */
+	void clear();
 
-		/*
-			* Peek returns the value of the first item from the stack.
-			*/
-		DataType peek();
-	};
-}
+	/**
+	 * Push adds an item to the top of the stack.
+	 */
+	bool push(const DataType& item);
 
-//#include "Stack.cpp"
+	/**
+	 * Pop removes the first item from the stack.
+	 */
+	DataType pop();
+
+	/**
+	 * Peek returns the value of the first item from the stack.
+	 */
+	DataType peek();
+};
+
 #endif

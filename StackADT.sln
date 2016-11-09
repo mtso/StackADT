@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StackLib", "StackLib\StackLib.vcxproj", "{71E6B6C4-5F5D-4A4C-A4C8-CFE26C05C323}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StackLib", "StackLib\StackLib.vcxproj", "{905503D9-D4D3-4246-A30F-C7BAAB56BAC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,10 +28,10 @@ Global
 		{F09D2FE0-F975-4FB0-862A-0D480BBDA3E1}.Debug|Win32.Build.0 = Debug|Win32
 		{F09D2FE0-F975-4FB0-862A-0D480BBDA3E1}.Release|Win32.ActiveCfg = Release|Win32
 		{F09D2FE0-F975-4FB0-862A-0D480BBDA3E1}.Release|Win32.Build.0 = Release|Win32
-		{71E6B6C4-5F5D-4A4C-A4C8-CFE26C05C323}.Debug|Win32.ActiveCfg = Debug|Win32
-		{71E6B6C4-5F5D-4A4C-A4C8-CFE26C05C323}.Debug|Win32.Build.0 = Debug|Win32
-		{71E6B6C4-5F5D-4A4C-A4C8-CFE26C05C323}.Release|Win32.ActiveCfg = Release|Win32
-		{71E6B6C4-5F5D-4A4C-A4C8-CFE26C05C323}.Release|Win32.Build.0 = Release|Win32
+		{905503D9-D4D3-4246-A30F-C7BAAB56BAC1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{905503D9-D4D3-4246-A30F-C7BAAB56BAC1}.Debug|Win32.Build.0 = Debug|Win32
+		{905503D9-D4D3-4246-A30F-C7BAAB56BAC1}.Release|Win32.ActiveCfg = Release|Win32
+		{905503D9-D4D3-4246-A30F-C7BAAB56BAC1}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

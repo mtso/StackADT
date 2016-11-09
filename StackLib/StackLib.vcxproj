@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{71E6B6C4-5F5D-4A4C-A4C8-CFE26C05C323}</ProjectGuid>
+    <ProjectGuid>{905503D9-D4D3-4246-A30F-C7BAAB56BAC1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>StackLib</RootNamespace>
   </PropertyGroup>
@@ -53,10 +53,6 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Lib>
-      <AdditionalOptions>
-      </AdditionalOptions>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -81,17 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h" />
-    <ClInclude Include="Logger\Logger.h" />
     <ClInclude Include="Node.h" />
-    <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
-    <ClInclude Include="StackLib.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="List.cpp" />
-    <ClCompile Include="Logger\Logger.cpp" />
     <ClCompile Include="Node.cpp" />
-    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
